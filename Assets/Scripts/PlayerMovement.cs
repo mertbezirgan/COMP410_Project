@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-  Rigidbody rb;
+  float startingZPos;
   // Start is called before the first frame update
   void Start()
   {
-    rb = GetComponent<Rigidbody>();
+    startingZPos = transform.position.z;
   }
 
   // Update is called once per frame
   void Update()
   {
-    transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * 10, 0, Input.GetAxis("Vertical") * Time.deltaTime * 10);
+    transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * 10, 0, 1 * Time.deltaTime * 10);
+
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+      transform.position = new Vector3(transform.position.x, transform.position.y, startingZPos);
+    }
   }
 
 }

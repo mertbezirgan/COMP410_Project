@@ -22,7 +22,18 @@ public class BulletBehaviour : MonoBehaviour
     {
       //destroy obstacle with particle effect
       other.gameObject.GetComponent<ObstacleDestruction>().explode();
+      Destroy(gameObject);
     }
+    else if (other.gameObject.tag == "environment")
+    {
+      rocketExplosionParticleSystem.Play();
+      GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+      Invoke("destroy", rocketExplosionParticleSystem.main.duration);
+    }
+  }
+
+  void destroy()
+  {
     Destroy(gameObject);
   }
 }

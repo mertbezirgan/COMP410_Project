@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
   public GameObject bulletPrefab;
+  public float bulletForce;
+
+  public int maxNumberOfBullets = 40;
+  public int firedBullets = 0;
   // Start is called before the first frame update
   void Start()
   {
@@ -16,13 +20,16 @@ public class PlayerShooting : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.Mouse0))
     {
-      Debug.Log("shoot");
       shoot();
     }
   }
 
   void shoot()
   {
-    GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+    GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+    //change bullets rotation to direction that is faced by player
+    Rigidbody rb = bullet.GetComponent<Rigidbody>();
+    rb.AddForce(transform.forward * bulletForce, ForceMode.Impulse);
+    this.firedBullets++;
   }
 }

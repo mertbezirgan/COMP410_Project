@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 85362233353023507}
   m_LocalRotation: {x: 5.3530965e-24, y: 0.000000087422784, z: -3.8213714e-15, w: 1}
   m_LocalPosition: {x: 0.7818008, y: -0.33760533, z: 0.55141246}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4877467873228656689}
@@ -123,7 +123,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446980017532131599}
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.44
+  m_Radius: 0.66
   m_SuspensionSpring:
     spring: 90000
     damper: 9000
@@ -185,7 +185,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518642725416350829}
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.44
+  m_Radius: 0.66
   m_SuspensionSpring:
     spring: 90000
     damper: 9000
@@ -247,7 +247,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925647769522089549}
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.44
+  m_Radius: 0.66
   m_SuspensionSpring:
     spring: 90000
     damper: 9000
@@ -296,7 +296,7 @@ Transform:
   m_GameObject: {fileID: 2452879462138913536}
   m_LocalRotation: {x: 5.3530965e-24, y: 0.000000087422784, z: -3.8213714e-15, w: 1}
   m_LocalPosition: {x: 0.78180045, y: -0.3376054, z: -0.5722885}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4877467873228656689}
@@ -392,7 +392,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3870642584100537525}
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.44
+  m_Radius: 0.66
   m_SuspensionSpring:
     spring: 90000
     damper: 9000
@@ -608,7 +608,7 @@ Transform:
   m_GameObject: {fileID: 6449552463150267416}
   m_LocalRotation: {x: -0.00000004371139, y: 0.000000043711395, z: 0.00000004371139, w: 1}
   m_LocalPosition: {x: -0.7815211, y: -0.33760527, z: 0.5514127}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4877467873228656689}
@@ -812,6 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7418870329000508850, guid: 175edee4516d2c349b411cf5e7da2382, type: 3}
+  bulletForce: 40
 --- !u!114 &929288588953269157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,7 +876,7 @@ Transform:
   m_GameObject: {fileID: 7334004582214796638}
   m_LocalRotation: {x: -7.137552e-15, y: 0.000000087422784, z: -0.00000008742279, w: 1}
   m_LocalPosition: {x: -0.78152126, y: -0.3376054, z: -0.57228816}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4877467873228656689}

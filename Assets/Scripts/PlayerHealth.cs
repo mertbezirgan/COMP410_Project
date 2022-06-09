@@ -24,7 +24,10 @@ public class PlayerHealth : MonoBehaviour
   public void decreaseHealth(float damage)
   {
     health -= damage;
-    Debug.Log("Health: " + health);
+    if (gameObject.tag == "enemy")
+    {
+      Debug.Log("Health: " + health);
+    }
     if (health <= 0)
     {
       //TODO game over and add particle

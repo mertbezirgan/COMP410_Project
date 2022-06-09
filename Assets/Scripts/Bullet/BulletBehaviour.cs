@@ -5,13 +5,15 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
   [SerializeField] ParticleSystem rocketBoostParticleSystem;
+  [SerializeField] ParticleSystem rocketExplosionParticleSystem;
   private void Start()
   {
     rocketBoostParticleSystem.Play();
+    Debug.Log("RocketBoostParticleSystem.Play()");
   }
   void FixedUpdate()
   {
-    GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 50);
+    // GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 50);
   }
 
   private void OnCollisionEnter(Collision other)

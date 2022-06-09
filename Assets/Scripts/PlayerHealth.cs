@@ -17,6 +17,10 @@ public class PlayerHealth : MonoBehaviour
 
   }
 
+  public float GetHealth()
+  {
+    return this.health;
+  }
   public void decreaseHealth(float damage)
   {
     health -= damage;

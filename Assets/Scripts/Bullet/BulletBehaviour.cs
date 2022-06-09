@@ -8,6 +8,7 @@ public class BulletBehaviour : MonoBehaviour
   private void Start()
   {
     rocketBoostParticleSystem.Play();
+    Debug.Log("RocketBoostParticleSystem.Play()");
   }
   void FixedUpdate()
   {
@@ -20,7 +21,7 @@ public class BulletBehaviour : MonoBehaviour
     {
       //destroy obstacle with particle effect
       other.gameObject.GetComponent<ObstacleDestruction>().explode();
+      Destroy(gameObject);
     }
-    Destroy(gameObject);
   }
 }

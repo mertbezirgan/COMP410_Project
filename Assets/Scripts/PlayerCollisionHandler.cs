@@ -20,8 +20,7 @@ public class PlayerCollisionHandler : MonoBehaviour
   {
     if (other.gameObject.tag == "obstacle")
     {
-      GetComponent<PlayerHealth>().decreaseHealth(1);
-      //destroy obstacle with particle effect
+      GetComponent<PlayerHealth>().decreaseHealth(5);
       other.gameObject.GetComponent<ObstacleDestruction>().explode();
     }
   }

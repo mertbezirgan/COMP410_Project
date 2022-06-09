@@ -18,7 +18,7 @@ public class PlayerShooting : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (Input.GetKeyDown(KeyCode.Mouse0))
+    if (Input.GetKeyDown(KeyCode.Mouse0) && firedBullets < maxNumberOfBullets)
     {
       shoot();
     }
@@ -27,6 +27,8 @@ public class PlayerShooting : MonoBehaviour
   void shoot()
   {
     GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+    //rotate bullet object to up (positive y axis)
+    bullet.transform.Rotate(-5, 0, 0);
     //change bullets rotation to direction that is faced by player
     Rigidbody rb = bullet.GetComponent<Rigidbody>();
     rb.AddForce(transform.forward * bulletForce, ForceMode.Impulse);

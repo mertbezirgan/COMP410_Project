@@ -9,27 +9,63 @@ public class BulletBehaviour : MonoBehaviour
   private void Start()
   {
     rocketBoostParticleSystem.Play();
-    Debug.Log("RocketBoostParticleSystem.Play()");
-  }
-  void FixedUpdate()
-  {
-    // GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 50);
+    // Debug.Log("RocketBoostParticleSystem.Play()");
   }
 
   private void OnCollisionEnter(Collision other)
   {
-    if (other.gameObject.tag == "obstacle")
+    if (gameObject.tag == "enemyBullet")
     {
-      //destroy obstacle with particle effect
-      other.gameObject.GetComponent<ObstacleDestruction>().explode();
-      Destroy(gameObject);
+      if (other.gameObject.tag == "obstacle")
+      {
+        //destroy obstacle with particle effect
+        other.gameObject.GetComponent<ObstacleDestruction>().explode();
+        Destroy(gameObject);
+        return;
+      }
+      else if (other.gameObject.tag == "Player")
+      {
+        other.gameObject.GetComponent<PlayerHealth>().decreaseHealth(5);
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        rocketExplosionParticleSystem.Play();
+        Invoke("destroy", rocketExplosionParticleSystem.main.duration);
+        return;
+      }
+      else if (other.gameObject.tag == "environment")
+      {
+        rocketExplosionParticleSystem.Play();
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        Invoke("destroy", rocketExplosionParticleSystem.main.duration);
+        return;
+      }
     }
-    else if (other.gameObject.tag == "environment")
+    else if (gameObject.tag == "bullet")
     {
-      rocketExplosionParticleSystem.Play();
-      GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-      Invoke("destroy", rocketExplosionParticleSystem.main.duration);
+      if (other.gameObject.tag == "obstacle")
+      {
+        //destroy obstacle with particle effect
+        other.gameObject.GetComponent<ObstacleDestruction>().explode();
+        Destroy(gameObject);
+        return;
+      }
+      else if (other.gameObject.tag == "enemy")
+      {
+        other.gameObject.GetComponent<PlayerHealth>().decreaseHealth(5);
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        rocketExplosionParticleSystem.Play();
+        Invoke("destroy", rocketExplosionParticleSystem.main.duration);
+        return;
+      }
+      else if (other.gameObject.tag == "environment")
+      {
+        rocketExplosionParticleSystem.Play();
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        Invoke("destroy", rocketExplosionParticleSystem.main.duration);
+        return;
+      }
     }
+
+
   }
 
   void destroy()

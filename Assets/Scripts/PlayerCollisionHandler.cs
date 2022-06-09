@@ -22,6 +22,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     {
       GetComponent<PlayerHealth>().decreaseHealth(1);
       //destroy obstacle with particle effect
+
       Destroy(other.gameObject);
     }
   }

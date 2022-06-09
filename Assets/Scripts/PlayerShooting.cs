@@ -27,8 +27,11 @@ public class PlayerShooting : MonoBehaviour
   void shoot()
   {
     GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+    //z 2.6
+    //y 0.7
+    bullet.transform.Translate(0, 0.3f, 2.6f);
     //rotate bullet object to up (positive y axis)
-    bullet.transform.Rotate(-5, 0, 0);
+    // bullet.transform.Rotate(-5, 0, 0);
     //change bullets rotation to direction that is faced by player
     Rigidbody rb = bullet.GetComponent<Rigidbody>();
     rb.AddForce(transform.forward * bulletForce, ForceMode.Impulse);

@@ -329,10 +329,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Standart Road Piece (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 967306977833143463, guid: a14ea71b30513eb4fbc4897082360ab5, type: 3}
-      propertyPath: m_TagString
-      value: environment
-      objectReference: {fileID: 0}
     - target: {fileID: 3700268301409781660, guid: a14ea71b30513eb4fbc4897082360ab5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2718,10 +2714,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Standart Road Piece (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 967306977833143463, guid: a14ea71b30513eb4fbc4897082360ab5, type: 3}
-      propertyPath: m_TagString
-      value: environment
-      objectReference: {fileID: 0}
     - target: {fileID: 3700268301409781660, guid: a14ea71b30513eb4fbc4897082360ab5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3222,10 +3214,6 @@ PrefabInstance:
     - target: {fileID: 967306977833143463, guid: a14ea71b30513eb4fbc4897082360ab5, type: 3}
       propertyPath: m_Name
       value: Standart Road Piece
-      objectReference: {fileID: 0}
-    - target: {fileID: 967306977833143463, guid: a14ea71b30513eb4fbc4897082360ab5, type: 3}
-      propertyPath: m_TagString
-      value: environment
       objectReference: {fileID: 0}
     - target: {fileID: 3700268301409781660, guid: a14ea71b30513eb4fbc4897082360ab5, type: 3}
       propertyPath: m_RootOrder

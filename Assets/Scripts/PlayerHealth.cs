@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
     health -= damage;
     if (gameObject.tag == "enemy")
     {
-      Debug.Log("Health: " + health);
+      // Debug.Log("Health: " + health);
     }
     if (health <= 0)
     {

@@ -18,7 +18,7 @@ public class PlayerShooting : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (Input.GetKeyDown(KeyCode.Mouse0) && firedBullets < maxNumberOfBullets)
+    if (Input.GetKeyDown(KeyCode.Mouse0) && firedBullets < maxNumberOfBullets && PauseMenu.GameIsPaused == false)
     {
       shoot();
     }

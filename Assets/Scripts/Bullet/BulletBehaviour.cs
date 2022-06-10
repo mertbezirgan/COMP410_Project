@@ -25,7 +25,7 @@ public class BulletBehaviour : MonoBehaviour
       }
       else if (other.gameObject.tag == "Player")
       {
-        other.gameObject.GetComponent<PlayerHealth>().decreaseHealth(5);
+        other.gameObject.GetComponent<PlayerHealth>().decreaseHealth(10);
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         rocketExplosionParticleSystem.Play();
         Invoke("destroy", rocketExplosionParticleSystem.main.duration);
@@ -50,7 +50,7 @@ public class BulletBehaviour : MonoBehaviour
       }
       else if (other.gameObject.tag == "enemy")
       {
-        other.gameObject.GetComponent<PlayerHealth>().decreaseHealth(5);
+        other.gameObject.GetComponent<PlayerHealth>().decreaseHealth(34);
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         rocketExplosionParticleSystem.Play();
         Invoke("destroy", rocketExplosionParticleSystem.main.duration);

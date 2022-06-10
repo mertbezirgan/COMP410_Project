@@ -28,5 +28,5 @@ public class UIScript : MonoBehaviour
   }
 
   string healthLabel { get { return string.Format("Health: {0}", playerHealth.GetHealth()); } set { } }
-  string bulletLabel { get { return string.Format("Bullets: {0}/{1}", (playerShooting.maxNumberOfBullets - playerShooting.firedBullets), playerShooting.maxNumberOfBullets); } set { } }
+  string bulletLabel { get { return string.Format("Ammo: {0}", (playerShooting.maxNumberOfBullets - playerShooting.firedBullets)); } set { } }
 }

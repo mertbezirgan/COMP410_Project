@@ -35,6 +35,10 @@ public class PlayerActions : MonoBehaviour
       //Load previous level
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+    else if (Input.GetKeyDown(KeyCode.H))
+    {
+      gameObject.GetComponent<PlayerHealth>().increaseHealth(100);
+    }
 
   }
 }

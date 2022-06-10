@@ -8,7 +8,7 @@ public class EnemyShooting : MonoBehaviour
   public GameObject bulletPrefab;
   public float bulletForce;
   float threshold = 40f;
-  bool isEnabled = true;
+  bool isEnabled = false;
   float lastShotTime = 0f;
   float cooldown = 2f;
   // Start is called before the first frame update
@@ -53,6 +53,6 @@ public class EnemyShooting : MonoBehaviour
     //change bullets rotation to direction that is faced by player
     Rigidbody rb = bullet.GetComponent<Rigidbody>();
     rb.AddForce(transform.forward * bulletForce, ForceMode.VelocityChange);
-    Debug.Log(rb.velocity);
+    // Debug.Log(rb.velocity);
   }
 }

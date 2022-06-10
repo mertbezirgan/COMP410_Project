@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -32,6 +33,24 @@ public class PlayerHealth : MonoBehaviour
     {
       //TODO game over and add particle
       Destroy(gameObject);
+      if (gameObject.tag == "Player")
+      {
+        Debug.Log("Game Over");
+        //load main menu scene
+        SceneManager.LoadScene(0);
+      }
+    }
+  }
+
+  public void increaseHealth(float health)
+  {
+    if (health + this.health > 100)
+    {
+      this.health = 100;
+    }
+    else
+    {
+      this.health += health;
     }
   }
 }

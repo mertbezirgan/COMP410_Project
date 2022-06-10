@@ -9,6 +9,7 @@ TagManager:
   - environment
   - enemyBullet
   - enemy
+  - pickup
   layers:
   - Default
   - TransparentFX

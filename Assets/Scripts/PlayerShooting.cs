@@ -37,4 +37,9 @@ public class PlayerShooting : MonoBehaviour
     rb.AddForce(transform.forward * bulletForce, ForceMode.Impulse);
     this.firedBullets++;
   }
+
+  public void increaseAmmo(int number)
+  {
+    this.maxNumberOfBullets += number;
+  }
 }
